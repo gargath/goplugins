@@ -1,7 +1,10 @@
 include .env
 
-BINARY := module
+BINARY := plugintest
 MODULE := mod/test.so
+
+.PHONY: all
+all: check $(MODULE) $(BINARY)
 
 .PHONY: clean
 clean:
@@ -40,6 +43,3 @@ lint:
                 --deadline=120s \
                 --tests ./...
 	@ echo
-
-.PHONY: all
-all: check $(MODULE) $(BINARY)
