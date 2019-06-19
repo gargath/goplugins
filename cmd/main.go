@@ -1,10 +1,10 @@
 package main
 
 import (
-	"plugin"
 	"fmt"
 	"os"
 	"path/filepath"
+	"plugin"
 )
 
 import "github.com/gargath/module/lib"
@@ -15,7 +15,7 @@ func main() {
 		panic(err)
 	}
 
-	plug, err := plugin.Open(dir+"/mod/test.so")
+	plug, err := plugin.Open(dir + "/mod/test.so")
 	if err != nil {
 		panic(err)
 	}
